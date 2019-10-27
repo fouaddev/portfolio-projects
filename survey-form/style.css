@@ -1,0 +1,219 @@
+body {
+	font-family: 'Quicksand', sans-serif, serif;
+	font-weight: 300;
+	background-color: rgb(200, 200, 150);
+	min-width: 350px;
+	text-align: center;
+	font-size: 1rem;
+}
+
+#title {
+	font-weight: 500;
+	font-size: 6rem;
+	margin: 30px !important;
+  background: linear-gradient(45deg, #09009f, #00ff95 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+#description-box {
+	background: linear-gradient(90deg, rgb(200, 200, 150) 0%, rgb(150, 200, 200) 90%);
+	animation: shaking 3.2s linear 1;
+	padding-bottom: 15px;
+}
+
+@keyframes shaking {
+	0% {
+		transform: rotate(-5deg)
+	}
+	80%{
+		transform: scale(1.5) rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+#survey-form #description-box .odd, .even {
+	color: rgb(250, 250, 250);
+	display: inline-block;
+	height: auto;
+	font-family: 'Teko', sans-serif, serif;
+	font-size: 3rem;
+	font-weight: 700;
+	padding-top: 5px;
+	background: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  border-radius: 10px;
+  text-shadow: 5px 5px 2px rgba(0,0,0,0.2);
+  transition: color;
+}
+
+#survey-form #description-box .even:hover {
+	color: rgb(0, 0, 0);
+}
+
+#survey-form #description-box .even:active {
+	color: rgb(194, 49, 33);
+}
+
+#survey-form #description-box .odd:hover {
+	color: rgb(0, 0, 0);
+}
+
+#survey-form #description-box .odd:active {
+	color: rgb(194, 49, 33);
+}
+
+#survey-form #description-box .space {
+	margin: 0 5px;
+}
+
+#survey-form #description-box .odd {
+	animation: oddTextShaking 0.4s linear 12;
+}
+
+#survey-form #description-box .even {
+	animation: evenTextShaking 0.4s linear 12;
+}
+
+#survey-form #description-box .odd:hover {
+	animation: oddTextShaking 0.4s linear infinite;
+}
+
+#survey-form #description-box .even:hover {
+	animation: evenTextShaking 0.4s linear infinite;
+}
+
+@keyframes oddTextShaking {
+	from {
+    -webkit-transform: translate(0, 0px) rotate(-12deg);
+            transform: translate(0, 0px) rotate(-12deg);
+    text-shadow: 10px 10px 1px rgba(0,0,0,0.3);
+  }
+  65% {
+    -webkit-transform: translate(0, 15px) rotate(12deg) scale(1.3);
+            transform: translate(0, 15px) rotate(12deg) scale(1.3);
+    text-shadow: -10px -10px 1px rgba(0,0,0,0.3);
+  }
+  to {
+    -webkit-transform: translate(0, 0px) rotate(-12deg);
+            transform: translate(0, 0px) rotate(-12deg);
+    text-shadow: 10px 10px 1px rgba(0,0,0,0.3);
+  }
+}
+
+@keyframes evenTextShaking {
+	from {
+    -webkit-transform: translate(0, 15px) rotate(-12deg) scale(1.3);
+            transform: translate(0, 15px) rotate(-12deg) scale(1.3);
+    text-shadow: -10px -10px 1px rgba(0,0,0,0.3);
+  }
+  65% {
+    -webkit-transform: translate(0, 0px) rotate(12deg);
+            transform: translate(0, 0px) rotate(12deg);
+    text-shadow: 10px 10px 1px rgba(0,0,0,0.3);
+  }
+	to {
+    -webkit-transform: translate(0, 15px) rotate(-12deg) scale(1.3);
+            transform: translate(0, 15px) rotate(-12deg) scale(1.3);
+    text-shadow: -10px -10px 1px rgba(0,0,0,0.3);
+  }
+}
+
+hr {
+	margin-bottom: 60px;
+	width: 96%;
+	height: 2px;
+	border: 0;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(200, 200, 150, 0.8), rgba(0, 0, 0, 0));
+}
+
+#survey-form {
+	font-weight: 200;
+	background-color: rgb(250, 260, 270);
+	border-radius: 10px;
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+#survey-form .labels {
+	margin-right: 10px;
+}
+
+#survey-form .row {
+	margin-top: 30px;
+}
+
+#survey-form .labels, .inputs {
+	display: inline-block;
+	width: 41%;
+	min-height: 30px;
+	vertical-align: top;
+}
+
+#survey-form .labels {
+	text-align: right;
+}
+
+#survey-form .inputs {
+	text-align: left;
+}
+
+.date {
+	display: inline-block;
+	width: 27%;
+}
+
+#comment-input {
+	height: 50px;
+	resize: vertical;
+}
+
+#submit {
+	font-size: 1.2em;
+	font-family: 'Quicksand', sans-serif, serif;
+	width: 140px;
+	height: 40px;
+	margin-bottom: 20px;
+	color: #fff;
+	background: #006400;
+	border: 3px solid #000000;
+	border-top: 0;
+	border-left: 0;
+	border-radius: 6px;
+	box-shadow: 2px 4px 3px rgba(0,0,0,0.9);
+	transition: background color;
+}
+
+#submit:hover {
+	background: #004600;
+	color: rgb(240, 240, 240);
+}
+
+#submit:active {
+	background: #006400;
+	color: rgb(255, 255, 255);
+}
+
+@media (max-width: 650px) {
+	#survey-form .labels, .inputs, #month, #day, #year {
+		width: 100%;
+	}
+
+	#survey-form .row {
+		width: 90%;
+		margin: 30px auto 0 auto;
+	}
+
+	#survey-form .labels, #month, #day, #year {
+		text-align: left;
+	}
+	#survey-form #description-box .odd, .even {
+		height: 35px;
+		font-size: 2em;
+	}
+}

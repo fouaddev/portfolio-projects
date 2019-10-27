@@ -1,0 +1,94 @@
+body {
+	font-family: Arial,Helvetica,sans-serif;
+  font-family: Helvetica, sans-serif, serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: .01em;
+  line-height: 1.9em;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#navbar {
+  position: fixed;
+  display: block;
+  overflow: auto;
+  min-width: 200px;
+  width: auto;
+  height: 100%;
+  text-align: left;
+  color: rgb(49, 88, 99);
+  border: 3px solid rgb(49, 88, 99);
+}
+
+header {
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: rgb(49, 88, 99);
+}
+
+#js_documentation {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: inherit;
+  color: rgb(49, 88, 99);
+  font-weight: 400;
+}
+
+#navbar a {
+  display: block;
+}
+
+#navbar > #js_documentation, .nav-link {
+  border-bottom: 2px solid rgb(49, 88, 99);
+  padding: 15px;
+}
+
+#navbar .nav-link:hover {
+  transform: scale(1.1);
+  border-top: 2px solid rgb(49, 88, 99);
+  background-color: rgb(230, 230, 230);
+}
+
+#main-doc {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin: 10px 10px 10px 290px;
+}
+
+#introduction {
+  margin-top: 16px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  color: #fdfdfd;
+  font-family: monospace;
+  font-size: 14px;
+  background-color: rgb(49, 88, 99);
+  white-space: pre-wrap;
+  margin:20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  #navbar {
+    position: relative;
+  }
+  #main-doc {
+    margin-left: 10px;
+  }
+  #navbar .nav-link {
+    text-align: center;
+  }
+}
