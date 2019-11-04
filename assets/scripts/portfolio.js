@@ -39,7 +39,6 @@ function timelyTextDisplay() {
 	}
 	
 	recursiveAppend();
-	appendMiniHeart();
 }
 
 // // alternative timelyTextDisplay() solution 1
