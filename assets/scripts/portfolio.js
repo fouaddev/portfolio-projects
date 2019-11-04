@@ -28,16 +28,18 @@ function timelyTextDisplay() {
 		if(i >= text.length) {
 			return;
 		}
-		if(text[i] === '.') {
-			document.querySelector('#welcome-text').innerHTML += '.<br>';
-		} else {
-			document.querySelector('#welcome-text').innerHTML += text[i];
+		if(text[i] === 't') {
+			setTimeout(() => {
+				document.querySelector('#welcome-text').innerHTML += ' <i class="fa fa-heart" style="font-size:48px;color:red"></i>';
+			}, 2000);
 		}
+		document.querySelector('#welcome-text').innerHTML += text[i];
 		i++;
 		setTimeout(recursiveAppend, 200);
 	}
 	
 	recursiveAppend();
+	appendMiniHeart();
 }
 
 // // alternative timelyTextDisplay() solution 1

@@ -197,6 +197,14 @@ body section .project-tile {
 	margin-bottom: 150px;
 }
 
+#welcome-text i {
+	color: rgb(92, 62, 96)!important;
+	font-size: 30px!important;
+	transform: rotate(0deg)!important;
+	padding: 0 3px;
+	margin: 0;
+}
+
 #welcome-section .welcome-styling {
 	letter-spacing: inherit;
 	font-weight: 200!important;
